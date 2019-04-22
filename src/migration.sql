@@ -6,8 +6,8 @@ USE adlister_db;
 
 CREATE TABLE users(
 id int unsigned not null primary key auto_increment,
-username varchar(200),
-email varchar(200),
+username varchar(200) not null,
+email varchar(200) unique not null,
 password varchar(200)
 );
 
@@ -18,3 +18,5 @@ title varchar(200),
 description varchar(200),
 foreign key (user_id) references users (id)
 );
+
+insert into users(username, email, password) values ('test','test','test');
