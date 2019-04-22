@@ -11,7 +11,6 @@ public class MySQLAdsDao implements Ads {
 
 
     public MySQLAdsDao(Config config) {
-//        Config config = new Config("jdbc:mysql://localhost/adlister_db?serverTimezone=UTC&useSSL=false", "luis_ad", "codeup");
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
