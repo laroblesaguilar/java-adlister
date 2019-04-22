@@ -3,7 +3,7 @@ public class DaoFactory {
 
     public static Ads getAdsDao() {
         if (adsDao == null) {
-            adsDao = new MySQLAdsDao(new Config("jdbc:mysql://localhost/adlister_db?serverTimezone=UTC&useSSL=false", "root", ""));
+            adsDao = new MySQLAdsDao(new Config());
         }
         return adsDao;
     }
